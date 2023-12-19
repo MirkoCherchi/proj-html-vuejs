@@ -1,13 +1,12 @@
 <script>
-import HeaderLogo from './HeaderLogo.vue';
-import HeaderNavbar from './HeaderNavbar.vue';
+import HeaderLogo from "./HeaderLogo.vue";
+import HeaderNavbar from "./HeaderNavbar.vue";
 export default {
     components: {
         HeaderLogo,
-        HeaderNavbar
-    }
+        HeaderNavbar,
+    },
 };
-
 </script>
 
 <template>

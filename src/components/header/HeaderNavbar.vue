@@ -1,6 +1,5 @@
 <script>
 export default {};
-
 </script>
 
 <template>
@@ -16,12 +15,11 @@ export default {};
 </template>
 
 <style scoped lang="scss">
-@use '../../assets/style/typography' as *;
+@use "../../assets/style/typography" as *;
 
 .list-nav {
     display: flex;
     gap: 40px;
-
 
     li {
         padding: 0 5px;
@@ -30,16 +28,10 @@ export default {};
             color: $black;
             text-transform: uppercase;
         }
-
     }
-
-
 
     .active {
         background: linear-gradient(to top, $bg-li 50%, $white 50%);
-        ;
     }
-
-
 }
 </style>
