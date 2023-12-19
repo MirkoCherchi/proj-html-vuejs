@@ -27,11 +27,13 @@ export default {};
         a {
             color: $black;
             text-transform: uppercase;
+            font-weight: 600;
+            font-size: 13px;
         }
     }
 
     .active {
-        background: linear-gradient(to top, $bg-li 50%, $white 50%);
+        background: linear-gradient(to top, $bg-li 40%, $white 40%);
     }
 }
 </style>
