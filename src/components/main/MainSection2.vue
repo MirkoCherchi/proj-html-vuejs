@@ -1,28 +1,30 @@
 <template>
-    <div class="items-container">
-        <div class="item">
-            <img src="/img/h-2-port-img-1.jpg" alt="Fe logo" />
+    <section>
+        <div class="items-container">
+            <div class="item">
+                <img src="/img/h-2-port-img-1.jpg" alt="Fe logo" />
+            </div>
+            <div class="item">
+                <img src="/img/h-2-port-img-2.jpg" alt="Bicycle" />
+            </div>
+            <div class="item">
+                <img src="/img/h-2-port-img-3.jpg" alt="Book A" />
+                <img class="absolute-shop" src="../../assets/svg/svg-6.svg" alt="Shop" />
+                <img class="absolute-circle" src="../../assets/svg/svg-7.svg" alt="circle" />
+            </div>
+            <div class="item">
+                <img src="/img/h-2-port-img-4.jpg" alt="Book psd" />
+            </div>
+            <div class="item">
+                <img src="/img/h-2-port-img-5.jpg" alt="Smartphone" />
+            </div>
+            <div class="item">
+                <img src="/img/h-2-port-img-6.jpg" alt="Mail" />
+                <img class="arrow1" src="../../assets/svg/svg-2.svg" alt="">
+                <img class="arrow2" src="../../assets/svg/svg-2.svg" alt="">
+            </div>
         </div>
-        <div class="item">
-            <img src="/img/h-2-port-img-2.jpg" alt="Bicycle" />
-        </div>
-        <div class="item">
-            <img src="/img/h-2-port-img-3.jpg" alt="Book A" />
-            <img class="absolute-shop" src="../../assets/svg/svg-6.svg" alt="Shop" />
-            <img class="absolute-circle" src="../../assets/svg/svg-7.svg" alt="circle" />
-        </div>
-        <div class="item">
-            <img src="/img/h-2-port-img-4.jpg" alt="Book psd" />
-        </div>
-        <div class="item">
-            <img src="/img/h-2-port-img-5.jpg" alt="Smartphone" />
-        </div>
-        <div class="item">
-            <img src="/img/h-2-port-img-6.jpg" alt="Mail" />
-            <font-awesome-icon class="arrow1" :icon="['fas', 'arrow-up']" />
-            <font-awesome-icon class="arrow2" :icon="['fas', 'arrow-up']" />
-        </div>
-    </div>
+    </section>
 </template>
 
 <style scoped lang="scss">
@@ -66,9 +68,9 @@
         right: 20px;
         background-color: $border-3;
         color: $white;
-        padding: 10px;
-        height: 18px;
-        width: 18px;
+        height: 28px;
+        width: 28px;
+        padding: 5px;
     }
 
     .arrow2 {
@@ -77,9 +79,9 @@
         right: 20px;
         background-color: $border-3;
         color: $white;
-        padding: 10px;
-        height: 18px;
-        width: 18px;
+        height: 28px;
+        width: 28px;
+        padding: 5px;
     }
 }
 </style>

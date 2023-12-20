@@ -127,6 +127,7 @@ h1 {
         padding: 20px 45px;
         text-transform: uppercase;
         font-weight: 600;
+        font-size: 14px;
         cursor: pointer;
     }
 }
@@ -175,6 +176,9 @@ h1 {
 
 .bold-text {
     font-weight: bold;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-weight: 700;
 }
 </style>
   
