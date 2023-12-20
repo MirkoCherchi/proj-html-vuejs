@@ -10,7 +10,7 @@ export default {};
         <li><a href="#">Blog</a></li>
         <li><a href="#">Shop</a></li>
         <li><a href="#">Elements</a></li>
-        <li><a href="#">Icon</a></li>
+        <li><a href="#"><img class="absolute-circle" src="../../assets/svg/svg-1.svg" alt="icon"></a></li>
     </ul>
 </template>
 
@@ -22,18 +22,18 @@ export default {};
     gap: 40px;
 
     li {
-        padding: 0 5px;
+        padding: 0px 5px;
 
         a {
             color: $black;
             text-transform: uppercase;
             font-weight: 600;
-            font-size: 13px;
+            font-size: 12px;
         }
     }
 
     .active {
-        background: linear-gradient(to top, $bg-li 40%, $white 40%);
+        background: linear-gradient(to top, $bg-li 50%, $white 50%);
     }
 }
 </style>

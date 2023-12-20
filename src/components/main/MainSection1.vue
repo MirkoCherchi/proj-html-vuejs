@@ -45,6 +45,7 @@
             </div>
             <div class="icon-circle-big">
                 <font-awesome-icon :icon="['fas', 'circle']" />
+
             </div>
 
 
@@ -90,12 +91,14 @@ h1 {
     position: absolute;
     top: 50%;
     right: 40px;
+    cursor: pointer;
 }
 
 .prev {
     position: absolute;
     top: 50%;
     left: 40px;
+    cursor: pointer;
 }
 
 .cont-sect1 {
@@ -124,6 +127,7 @@ h1 {
         padding: 20px 45px;
         text-transform: uppercase;
         font-weight: 600;
+        cursor: pointer;
     }
 }
 

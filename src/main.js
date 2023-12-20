@@ -11,8 +11,9 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 /* add icons to the library */
-library.add(faAngleLeft, faAngleRight, faCircle);
+library.add(faAngleLeft, faAngleRight, faCircle, faArrowUp);
 
 createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app");
