@@ -1,7 +1,19 @@
-# Vue 3 + Vite
+# Marèe
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Esercizio Marèe
 
-## Recommended IDE Setup
+## 🔗 Contatti
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+[![github](https://img.shields.io/badge/GITHUB-black?style=for-the-badge&logo=github&logoColor=ffffff)](https://github.com/MirkoCherchi)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mirko-cherchi-b42042221/)
+[![email](https://img.shields.io/badge/mirkocherchi1992%40gmail.com-red?style=for-the-badge&logo=gmail&logoColor=ffffff)](mirkocherchi1992@gmail.com)
+
+## 🛠 Skills
+
+HTML, CSS, JS, VueJS, Vite, Scss...
+
+## Marèe
+
+
+![Marèe](./public/img/Screenshot%202023-12-20%20224025.png)
+
