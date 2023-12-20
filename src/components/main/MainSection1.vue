@@ -178,7 +178,6 @@ h1 {
     font-weight: bold;
     font-family: "Playfair Display", serif;
     font-style: italic;
-    font-weight: 700;
 }
 </style>
   

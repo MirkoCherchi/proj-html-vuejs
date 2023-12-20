@@ -10,7 +10,7 @@
             <div class="item">
                 <img src="/img/h-2-port-img-3.jpg" alt="Book A" />
                 <img class="absolute-shop" src="../../assets/svg/svg-6.svg" alt="Shop" />
-                <img class="absolute-circle" src="../../assets/svg/svg-7.svg" alt="circle" />
+                <img class="absolute-circle" src="../../assets/svg/svg-4.svg" alt="circle" />
             </div>
             <div class="item">
                 <img src="/img/h-2-port-img-4.jpg" alt="Book psd" />
@@ -46,7 +46,7 @@
 
     .absolute-shop {
         position: absolute;
-        width: 6%;
+        width: 8%;
         top: 170px;
         right: 0;
         background-color: #fff;
@@ -55,10 +55,10 @@
 
     .absolute-circle {
         position: absolute;
-        width: 6%;
+        width: 8%;
         top: 120px;
         right: 0;
-        background-color: #fff;
+        background-color: $bg-8;
         padding: 10px;
     }
 

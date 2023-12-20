@@ -58,14 +58,13 @@ export default {};
 
 h2 {
     text-align: center;
-    font-size: 60px;
+    font-size: 55px;
     font-weight: 400;
 
     span {
         font-weight: bold;
         font-family: "Playfair Display", serif;
         font-style: italic;
-        font-weight: 700;
     }
 }
 
