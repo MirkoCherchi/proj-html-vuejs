@@ -1,6 +1,37 @@
 <script>
-export default {};
-
+export default {
+    data() {
+        return {
+            footerContent: [
+                {
+                    type: "logo",
+                    logoSrc: "/img/logo-sidearea-1.png",
+                    slogan: "Let's Get Creative",
+                },
+                {
+                    type: "contact",
+                    email: "maree.qode@gmail.com",
+                    phone: "+44645 321 789",
+                },
+                {
+                    type: "address",
+                    addressLine1: "Avenue d'Audenghem 10",
+                    addressLine2: "1040 Brussels, Belgium",
+                },
+                {
+                    type: "social",
+                    text: "Stay in touch with us",
+                    socialLinks: [
+                        { icon: ["fab", "twitter"], url: "#" },
+                        { icon: ["fab", "pinterest-p"], url: "#" },
+                        { icon: ["fab", "facebook-f"], url: "#" },
+                        { icon: ["fab", "linkedin-in"], url: "#" },
+                    ],
+                },
+            ],
+        };
+    },
+};
 </script>
 
 <template>
@@ -8,19 +39,30 @@ export default {};
         <div class="cont-footer">
             <img class="arrow1" src="../../assets/svg/svg-2.svg" alt="">
 
-
             <div class="items">
-                <div class="item"><img class="logo" src="/img/logo-sidearea-1.png" alt="logo"><span>Let's Get
-                        Creative</span></div>
-                <div class="item"><span>maree.qode@gmail.com</span><span>+44645 321 789</span></div>
-                <div class="item"><span>Avenue d'Audenghem 10</span><span>1040 Brussels, Belgium</span></div>
-                <div class="item"><span>Stay in touch with us</span>
-                    <ul>
-                        <li><a href="#"></a><font-awesome-icon :icon="['fab', 'twitter']" /></li>
-                        <li><a href="#"></a><font-awesome-icon :icon="['fab', 'pinterest-p']" /></li>
-                        <li><a href="#"></a><font-awesome-icon :icon="['fab', 'facebook-f']" /></li>
-                        <li><a href="#"></a><font-awesome-icon :icon="['fab', 'linkedin-in']" /></li>
-                    </ul>
+                <div v-for="item in footerContent" class="item">
+                    <template v-if="item.type === 'logo'">
+                        <img class="logo" :src="item.logoSrc" alt="logo">
+                        <span>{{ item.slogan }}</span>
+                    </template>
+                    <template v-else-if="item.type === 'contact'">
+                        <span>{{ item.email }}</span>
+                        <span>{{ item.phone }}</span>
+                    </template>
+                    <template v-else-if="item.type === 'address'">
+                        <span>{{ item.addressLine1 }}</span>
+                        <span>{{ item.addressLine2 }}</span>
+                    </template>
+                    <template v-else-if="item.type === 'social'">
+                        <span>{{ item.text }}</span>
+                        <ul>
+                            <li v-for="(link, i) in item.socialLinks" :key="i">
+                                <a :href="link.url">
+                                    <font-awesome-icon :icon="link.icon" />
+                                </a>
+                            </li>
+                        </ul>
+                    </template>
                 </div>
             </div>
         </div>
@@ -66,6 +108,11 @@ export default {};
 
         li {
             cursor: pointer;
+
+            a {
+                text-decoration: none;
+                color: $black;
+            }
         }
     }
 }

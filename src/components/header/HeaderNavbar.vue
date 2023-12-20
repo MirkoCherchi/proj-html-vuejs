@@ -1,16 +1,38 @@
 <script>
-export default {};
+export default {
+    data() {
+        return {
+            navItems: [
+                { text: "Home", href: "#", active: true },
+                { text: "Pages", href: "#" },
+                { text: "Portfolio", href: "#" },
+                { text: "Blog", href: "#" },
+                { text: "Shop", href: "#" },
+                { text: "Elements", href: "#" },
+                { imgSrc: "../../../src/assets/svg/svg-1.svg", alt: "icon", href: "#" },
+            ],
+            currentActiveIndex: 0,
+        };
+    },
+    methods: {
+        setActive(index) {
+
+            this.currentActiveIndex = index;
+        },
+    },
+};
 </script>
 
 <template>
     <ul class="list-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Pages</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">Elements</a></li>
-        <li><a href="#"><img class="absolute-circle" src="../../assets/svg/svg-1.svg" alt="icon"></a></li>
+        <li v-for="(item, index) in navItems" :class="{ active: index === currentActiveIndex }">
+            <a :href="item.href" v-if="!item.imgSrc" @click="setActive(index)">
+                {{ item.text }}
+            </a>
+            <a :href="item.href" v-else>
+                <img class="absolute-circle" :src="item.imgSrc" :alt="item.alt" />
+            </a>
+        </li>
     </ul>
 </template>
 
