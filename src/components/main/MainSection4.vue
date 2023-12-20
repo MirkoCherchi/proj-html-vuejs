@@ -4,17 +4,23 @@ export default {};
 
 <template>
     <section>
+        <!-- Contenitore principale della sezione 4 -->
         <div class="big-cont4">
+            <!-- Immagine foglia a destra -->
             <img class="absolute1" src="/img/short-slider-rev-1-img-2.png" alt="foglia dx" />
+            <!-- Immagine foglia a sinistra -->
             <img class="absolute2" src="/img/short-slider-rev-1-img-6.png" alt="foglia sx" />
+            <!-- Contenitore mini della sezione 4 -->
             <div class="cont-section4">
                 <h2>Want to work with us? Send us <span>a message!</span></h2>
+
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore. Ut enim ad minim
                     veniam, quis nostrud exercitation ullamco lavoris nisi ut aliquip ex
                     ea commo.
                 </p>
+                <!-- Bottone -->
                 <button>Contact</button>
             </div>
         </div>
@@ -67,9 +73,15 @@ export default {};
         padding: 20px 70px;
         text-transform: uppercase;
         font-size: 14px;
-        letter-spacing: 2px;
+        letter-spacing: 3px;
         font-weight: 600;
         cursor: pointer;
+
+        // Stile per l'hover del bottone
+        &:hover {
+            background-color: $bg-12;
+            color: $white;
+        }
     }
 }
 </style>

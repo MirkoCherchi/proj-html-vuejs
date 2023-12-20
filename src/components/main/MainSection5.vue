@@ -1,37 +1,48 @@
 <script>
 export default {};
-
 </script>
 
 <template>
     <section>
+        <!-- Contenitore principale della sezione 5 -->
         <div class="cont-sec5">
-            <img class="arrow1" src="../../assets/svg/svg-2.svg" alt="">
+            <!-- Icona freccia -->
+            <img class="arrow1" src="../../assets/svg/svg-2.svg" alt="arrow" />
+            <!-- Contenitore delle cards -->
             <div class="cards">
+                <!-- Card 1 -->
+                <div class="card">
+                    <!-- Elemento stick sulla card -->
+                    <div class="stick">
+                        <!-- Parte superiore dello stick -->
+                        <div class="stick-top">07</div>
+                        <!-- Parte inferiore dello stick -->
+                        <div class="stick-bottom">May '19</div>
+                    </div>
+                    <!-- Immagine della card -->
+                    <img src="/img/h-2-blog-img-1.jpg" alt="" />
+                    <!-- Titolo della card -->
+                    <h5>This way, loves: a detailed guide through new design</h5>
+                    <!-- Autore della card -->
+                    <p>By Emily Fields</p>
+                </div>
+                <!-- Card 2 -->
                 <div class="card">
                     <div class="stick">
                         <div class="stick-top">07</div>
                         <div class="stick-bottom">May '19</div>
                     </div>
-                    <img src="/img/h-2-blog-img-1.jpg" alt="">
+                    <img src="/img/h-2-blog-img-2.jpg" alt="" />
                     <h5>This way, loves: a detailed guide through new design</h5>
                     <p>By Emily Fields</p>
                 </div>
+                <!-- Card 3 -->
                 <div class="card">
                     <div class="stick">
                         <div class="stick-top">07</div>
                         <div class="stick-bottom">May '19</div>
                     </div>
-                    <img src="/img/h-2-blog-img-2.jpg" alt="">
-                    <h5>This way, loves: a detailed guide through new design</h5>
-                    <p>By Emily Fields</p>
-                </div>
-                <div class="card">
-                    <div class="stick">
-                        <div class="stick-top">07</div>
-                        <div class="stick-bottom">May '19</div>
-                    </div>
-                    <img src="/img/h-2-blog-img-3.jpg" alt="">
+                    <img src="/img/h-2-blog-img-3.jpg" alt="" />
                     <h5>This way, loves: a detailed guide through new design</h5>
                     <p>By Emily Fields</p>
                 </div>
@@ -41,7 +52,7 @@ export default {};
 </template>
 
 <style scoped lang="scss">
-@use '../../assets/style/typography' as *;
+@use "../../assets/style/typography" as *;
 
 .cont-sec5 {
     position: relative;
@@ -71,7 +82,7 @@ export default {};
         .stick {
             position: absolute;
             text-align: center;
-            top: - 17px;
+            top: -17px;
             left: 15px;
 
             .stick-top {
@@ -108,7 +119,6 @@ export default {};
             font-size: small;
             font-weight: 600;
         }
-
     }
 }
 </style>

@@ -2,6 +2,7 @@
 export default {
     data() {
         return {
+            // Contenuto del footer
             footerContent: [
                 {
                     type: "logo",
@@ -37,27 +38,36 @@ export default {
 <template>
     <footer>
         <div class="cont-footer">
-            <img class="arrow1" src="../../assets/svg/svg-2.svg" alt="">
+            <!-- Freccia decorativa -->
+            <img class="arrow1" src="../../assets/svg/svg-2.svg" alt="" />
 
+            <!-- Contenitore degli elementi -->
             <div class="items">
+                <!-- Iterazione sugli elementi -->
                 <div v-for="item in footerContent" class="item">
+                    <!-- Blocco logo -->
                     <template v-if="item.type === 'logo'">
-                        <img class="logo" :src="item.logoSrc" alt="logo">
+                        <img class="logo" :src="item.logoSrc" alt="logo" />
                         <span>{{ item.slogan }}</span>
                     </template>
+                    <!-- Blocco contact -->
                     <template v-else-if="item.type === 'contact'">
                         <span>{{ item.email }}</span>
                         <span>{{ item.phone }}</span>
                     </template>
+                    <!-- Blocco address -->
                     <template v-else-if="item.type === 'address'">
                         <span>{{ item.addressLine1 }}</span>
                         <span>{{ item.addressLine2 }}</span>
                     </template>
+                    <!-- Blocco social -->
                     <template v-else-if="item.type === 'social'">
                         <span>{{ item.text }}</span>
+                        <!-- Lista degli elementi social -->
                         <ul>
                             <li v-for="(link, i) in item.socialLinks" :key="i">
                                 <a :href="link.url">
+                                    <!-- Icona del social -->
                                     <font-awesome-icon :icon="link.icon" />
                                 </a>
                             </li>
@@ -70,7 +80,7 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@use '../../assets/style/typography' as *;
+@use "../../assets/style/typography" as *;
 
 .cont-footer {
     background-color: $bg-7;

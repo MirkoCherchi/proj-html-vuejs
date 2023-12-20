@@ -1,44 +1,65 @@
 <script>
 export default {};
-
 </script>
 
 <template>
+    <!-- Sezione principale -->
     <section>
+        <!-- Contenitore della sezione 3 -->
         <div class="cont-section3">
-            <img class="arrow1" src="../../assets/svg/svg-2.svg" alt="">
+            <!-- Icona freccia -->
+            <img class="arrow1" src="../../assets/svg/svg-2.svg" alt="" />
+            <!-- Titolo della sezione -->
             <h2>Working <span>process</span></h2>
+            <!-- Contenitore delle card -->
             <div class="cards">
+                <!-- Prima card -->
                 <div class="card">
                     <div class="icon">1</div>
-                    <h4>First theres an idea</h4>
-                    <p>Lorem ipsum dolor sit, conetu adipisc sed be er ore aliqua pleasure itself.</p>
+                    <h4>First there's an idea</h4>
+                    <p>
+                        Lorem ipsum dolor sit, conetu adipisc sed be er ore aliqua pleasure
+                        itself.
+                    </p>
                 </div>
+                <!-- Seconda card -->
                 <div class="card">
-                    <div class="icon"><font-awesome-icon class="comment" :icon="['far', 'comment']" /></div>
+                    <div class="icon">
+                        <font-awesome-icon class="comment" :icon="['far', 'comment']" />
+                    </div>
                     <h4>Then we talk about</h4>
-                    <p>Lorem ipsum dolor sit, conetu adipisc sed be er ore aliqua pleasure itself.</p>
-
+                    <p>
+                        Lorem ipsum dolor sit, conetu adipisc sed be er ore aliqua pleasure
+                        itself.
+                    </p>
                 </div>
+                <!-- Terza card -->
                 <div class="card">
-                    <div class="icon"><font-awesome-icon class="cloud" :icon="['fas', 'cloud']" /></div>
+                    <div class="icon">
+                        <font-awesome-icon class="cloud" :icon="['fas', 'cloud']" />
+                    </div>
                     <h4>And we think about</h4>
-                    <p>Lorem ipsum dolor sit, conetu adipisc sed be er ore aliqua pleasure itself.</p>
+                    <p>
+                        Lorem ipsum dolor sit, conetu adipisc sed be er ore aliqua pleasure
+                        itself.
+                    </p>
                 </div>
+                <!-- Quarta card -->
                 <div class="card">
                     <div class="icon">4</div>
                     <h4>So we draw along</h4>
-                    <p>Lorem ipsum dolor sit, conetu adipisc sed be er ore aliqua pleasure itself.</p>
+                    <p>
+                        Lorem ipsum dolor sit, conetu adipisc sed be er ore aliqua pleasure
+                        itself.
+                    </p>
                 </div>
             </div>
-
-
         </div>
     </section>
 </template>
 
 <style scoped lang="scss">
-@use '../../assets/style/typography' as *;
+@use "../../assets/style/typography" as *;
 
 .cont-section3 {
     position: relative;

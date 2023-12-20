@@ -1,8 +1,12 @@
+<script>
+export default {};
+</script>
+
 <template>
     <section>
+        <!-- Contenitore principale della sezione 1 -->
         <div class="cont-sect1">
-
-
+            <!-- Sezione sinistra con testo e bottone -->
             <div class="left-section1">
                 <h1>Devotion that never <span class="bold-text">ends</span></h1>
                 <p>
@@ -12,37 +16,38 @@
                 <button>Read More</button>
             </div>
 
+            <!-- Sezione destra con immagini e frecce di navigazione -->
             <div class="right-section1">
+                <!-- Contenitore delle immagini -->
                 <div class="image-container">
+                    <!-- Sezione sinistra delle immagini con sovrapposizioni -->
                     <div class="img-left">
                         <img src="/img/h-2-slider-img-15.png" alt="women roller" />
-                        <img class="absolute1" src="/img/h-2-slider-img-12.png" alt="">
-                        <img class="absolute2" src="/img/h-2-slider-img-13.png" alt="">
-                        <img class="absolute5" src="/img/short-slider-rev-1-img-2.png" alt="">
+                        <img class="absolute1" src="/img/h-2-slider-img-12.png" alt="" />
+                        <img class="absolute2" src="/img/h-2-slider-img-13.png" alt="" />
+                        <img class="absolute5" src="/img/short-slider-rev-1-img-2.png" alt="" />
                     </div>
+                    <!-- Sezione destra delle immagini con sovrapposizioni -->
                     <div class="img-right">
                         <img src="/img/h-2-slider-img-16.png" alt="men skateboard" />
-                        <img class="absolute3" src="/img/h-2-slider-img-14.png" alt="">
-                        <img class="absolute4" src="/img/h-2-slider-img-17.png" alt="">
-
-                        <img class="absolute6" src="/img/short-slider-rev-1-img-6.png" alt="">
+                        <img class="absolute3" src="/img/h-2-slider-img-14.png" alt="" />
+                        <img class="absolute4" src="/img/h-2-slider-img-17.png" alt="" />
+                        <img class="absolute6" src="/img/short-slider-rev-1-img-6.png" alt="" />
                     </div>
                 </div>
             </div>
+
+            <!-- next e prev  -->
             <div>
                 <font-awesome-icon class="prev" :icon="['fas', 'angle-left']" />
             </div>
             <div>
                 <font-awesome-icon class="next" :icon="['fas', 'angle-right']" />
             </div>
-            <div>
-
-
-
-            </div>
-
-
+            <div></div>
         </div>
+
+        <!-- Sezione centrale con cerchi e icone -->
         <div class="center-section1">
             <div class="icon-circle">
                 <font-awesome-icon :icon="['fas', 'circle']" />
@@ -52,16 +57,13 @@
             </div>
             <div class="icon-circle-big">
                 <font-awesome-icon :icon="['fas', 'circle']" />
-
             </div>
-
-
         </div>
     </section>
 </template>
-  
+
 <style scoped lang="scss">
-@use '../../assets/style/typography' as *;
+@use "../../assets/style/typography" as *;
 
 .center-section1 {
     display: flex;
@@ -149,20 +151,18 @@ h1 {
         position: absolute;
         bottom: 220px;
         left: -80px;
-
     }
 
     .absolute2 {
         position: absolute;
         bottom: 0;
         left: -50px;
-
     }
 
     .absolute5 {
         position: absolute;
         left: 0;
-        top: - 40px;
+        top: -40px;
     }
 }
 
@@ -182,8 +182,6 @@ h1 {
         bottom: 0;
     }
 
-
-
     .absolute6 {
         position: absolute;
         right: -30px;
@@ -191,16 +189,9 @@ h1 {
     }
 }
 
-
-
-
-
-
-
 .bold-text {
     font-weight: bold;
     font-family: "Playfair Display", serif;
     font-style: italic;
 }
 </style>
-  

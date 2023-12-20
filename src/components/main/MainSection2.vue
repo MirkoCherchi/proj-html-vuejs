@@ -1,27 +1,76 @@
+<script>
+export default {
+    data() {
+        return {
+            // Array di oggetti contenenti le informazioni degli elementi
+            items: [
+                {
+                    imageSrc: "/img/h-2-port-img-1.jpg",
+                    alt: "Fe logo",
+                    description: "Illustration of novels",
+                    category: "Illustration",
+                },
+                {
+                    imageSrc: "/img/h-2-port-img-2.jpg",
+                    alt: "Bicycle",
+                    description: "Illustration of novels",
+                    category: "Illustration",
+                },
+                {
+                    imageSrc: "/img/h-2-port-img-3.jpg",
+                    alt: "Book A",
+                    description: "Illustration of novels",
+                    category: "Illustration",
+                },
+                {
+                    imageSrc: "/img/h-2-port-img-4.jpg",
+                    alt: "Book psd",
+                    description: "Illustration of novels",
+                    category: "Illustration",
+                },
+                {
+                    imageSrc: "/img/h-2-port-img-5.jpg",
+                    alt: "Smartphone",
+                    description: "Illustration of novels",
+                    category: "Illustration",
+                },
+                {
+                    imageSrc: "/img/h-2-port-img-6.jpg",
+                    alt: "Mail",
+                    description: "Illustration of novels",
+                    category: "Illustration",
+                },
+            ],
+            // Indice dell'elemento attualmente attivo
+            activeIndex: null,
+        };
+    },
+    methods: {
+        // Metodo per attivare un elemento al passaggio del mouse
+        activateItem(index) {
+            this.activeIndex = index;
+        },
+        // Metodo per disattivare l'elemento quando il mouse esce dall'area
+        deactivateItem() {
+            this.activeIndex = null;
+        },
+    },
+};
+</script>
+
 <template>
     <section>
         <div class="items-container">
-            <div class="item">
-                <img src="/img/h-2-port-img-1.jpg" alt="Fe logo" />
-            </div>
-            <div class="item">
-                <img src="/img/h-2-port-img-2.jpg" alt="Bicycle" />
-            </div>
-            <div class="item">
-                <img src="/img/h-2-port-img-3.jpg" alt="Book A" />
-                <img class="absolute-shop" src="../../assets/svg/svg-6.svg" alt="Shop" />
-                <img class="absolute-circle" src="../../assets/svg/svg-4.svg" alt="circle" />
-            </div>
-            <div class="item">
-                <img src="/img/h-2-port-img-4.jpg" alt="Book psd" />
-            </div>
-            <div class="item">
-                <img src="/img/h-2-port-img-5.jpg" alt="Smartphone" />
-            </div>
-            <div class="item">
-                <img src="/img/h-2-port-img-6.jpg" alt="Mail" />
-                <img class="arrow1" src="../../assets/svg/svg-2.svg" alt="">
-                <img class="arrow2" src="../../assets/svg/svg-2.svg" alt="">
+            <!-- Ciclo su ogni elemento nell'array items -->
+            <div v-for="(item, index) in items" class="item" @mouseover="activateItem(index)"
+                @mouseleave="deactivateItem(index)">
+                <!-- Immagine dell'elemento -->
+                <img :src="item.imageSrc" :alt="item.alt" />
+                <!-- Contenuto attivo visualizzato solo quando l'elemento è attivo -->
+                <div class="active" v-if="activeIndex === index">
+                    <p>{{ item.description }}</p>
+                    <span>{{ item.category }}</span>
+                </div>
             </div>
         </div>
     </section>
@@ -38,6 +87,27 @@
     .item {
         width: calc(100% / 3);
         position: relative;
+
+        .active {
+            position: absolute;
+            background-image: url(/img/rbt-placeholder.jpg);
+            top: 50%;
+            transform: translatey(-50%);
+            padding: 20px 35px;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+
+            p {
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+
+            span {
+                font-size: 16px;
+                font-weight: bold;
+                font-family: "Playfair Display", serif;
+                font-style: italic;
+            }
+        }
     }
 
     img {
@@ -47,7 +117,7 @@
     .absolute-shop {
         position: absolute;
         width: 8%;
-        top: 170px;
+        top: 185px;
         right: 0;
         background-color: #fff;
         padding: 10px;
