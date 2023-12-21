@@ -137,6 +137,13 @@ h1 {
         font-weight: 600;
         font-size: 14px;
         cursor: pointer;
+
+        &:hover {
+            background-color: $border-4;
+            color: $white;
+            transition: 0.5s;
+
+        }
     }
 }
 

@@ -15,7 +15,7 @@ export default {};
             <div class="cards">
                 <!-- Prima card -->
                 <div class="card">
-                    <div class="icon">1</div>
+                    <div class="icon"><font-awesome-icon class="light" :icon="['fas', 'lightbulb']" /></div>
                     <h4>First there's an idea</h4>
                     <p>
                         Lorem ipsum dolor sit, conetu adipisc sed be er ore aliqua pleasure
@@ -46,7 +46,7 @@ export default {};
                 </div>
                 <!-- Quarta card -->
                 <div class="card">
-                    <div class="icon">4</div>
+                    <div class="icon"><font-awesome-icon class="pen" :icon="['fas', 'pen']" /></div>
                     <h4>So we draw along</h4>
                     <p>
                         Lorem ipsum dolor sit, conetu adipisc sed be er ore aliqua pleasure
@@ -117,7 +117,7 @@ h2 {
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-            font-size: 35px;
+            font-size: 38px;
 
             .comment {
                 color: $text-2;
@@ -125,6 +125,14 @@ h2 {
 
             .cloud {
                 color: $text-9;
+            }
+
+            .pen {
+                color: $text-6;
+            }
+
+            .light {
+                color: $text-3;
             }
         }
 

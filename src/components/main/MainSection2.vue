@@ -95,6 +95,7 @@ export default {
             transform: translatey(-50%);
             padding: 20px 35px;
             box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
 
             p {
                 font-size: 24px;

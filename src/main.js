@@ -18,6 +18,8 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faPinterestP } from "@fortawesome/free-brands-svg-icons";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
+import { faPen } from "@fortawesome/free-solid-svg-icons";
 
 /* add icons to the library */
 library.add(
@@ -30,7 +32,9 @@ library.add(
   faTwitter,
   faPinterestP,
   faFacebookF,
-  faLinkedinIn
+  faLinkedinIn,
+  faLightbulb,
+  faPen
 );
 
 createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app");
