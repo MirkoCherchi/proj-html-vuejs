@@ -31,13 +31,13 @@ export default {
     <!-- Lista di navigazione con elementi dinamici -->
     <ul class="list-nav">
         <!-- Itera sugli elementi di navigazione nell'array -->
-        <li v-for="(item, index) in navItems" :class="{ active: index === currentActiveIndex }">
-            <!-- Se l'elemento non ha un'immagine, mostra un link di testo -->
-            <a :href="item.href" v-if="!item.imgSrc" @click="setActive(index)">
+        <li v-for="(item, index) in navItems">
+            <!-- Aggiungi la classe active solo se l'elemento non ha un'immagine -->
+            <a :href="item.href" v-if="!item.imgSrc" :class="{ active: index === currentActiveIndex }" @click="setActive(index)">
                 {{ item.text }}
             </a>
-            <!-- Se l'elemento ha un'immagine, mostra un link con l'immagine -->
-            <a :href="item.href" v-else>
+            <!-- Per gli elementi con immagine, applica la classe active in modo simile -->
+            <a :href="item.href" v-else :class="{ active: index === currentActiveIndex }">
                 <img class="absolute-circle" :src="item.imgSrc" :alt="item.alt" />
             </a>
         </li>
@@ -58,7 +58,12 @@ export default {
             color: $black;
             text-transform: uppercase;
             font-weight: 600;
-            font-size: 12px;
+            font-size: 13px;
+        letter-spacing: 4px;
+
+        &:hover{
+            background: linear-gradient(to top, $bg-li 50%, $white 50%);
+        }
         }
     }
 

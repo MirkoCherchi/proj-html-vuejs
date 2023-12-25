@@ -115,23 +115,7 @@ export default {
         width: 100%;
     }
 
-    .absolute-shop {
-        position: absolute;
-        width: 8%;
-        top: 185px;
-        right: 0;
-        background-color: #fff;
-        padding: 10px;
-    }
-
-    .absolute-circle {
-        position: absolute;
-        width: 8%;
-        top: 120px;
-        right: 0;
-        background-color: $bg-8;
-        padding: 10px;
-    }
+   
 
     .arrow1 {
         position: absolute;

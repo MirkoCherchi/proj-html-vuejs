@@ -76,11 +76,13 @@ export default {};
         letter-spacing: 3px;
         font-weight: 600;
         cursor: pointer;
+    
 
         // Stile per l'hover del bottone
         &:hover {
             background-color: $bg-12;
             color: $white;
+            transition: 0.5s;
         }
     }
 }

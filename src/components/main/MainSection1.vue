@@ -114,6 +114,25 @@ h1 {
     display: flex;
     width: 100%;
     padding: 100px 280px 0px 350px;
+    overflow: hidden;
+    &:hover .absolute1{
+            transform: translateX(-80px) translateY(-220px) rotate(360deg);  
+    }
+    &:hover .absolute2{
+            transform: translateX(0px) translateY(-50px) rotate(360deg);  
+    }
+    &:hover .absolute5{
+            transform: translateX(-40px) translateY(-450px) rotate(360deg);  
+    }
+    &:hover .absolute3{
+            transform: translateX(200px) translateY(-500px) rotate(360deg);  
+    }
+    &:hover .absolute4{
+            transform: translateX(300px) translateY(-100px) rotate(360deg);  
+    }
+    &:hover .absolute6{
+            transform: translateX(300px) translateY(-400px) rotate(360deg);  
+    }
 }
 
 .left-section1 {
@@ -149,50 +168,55 @@ h1 {
 
 .image-container {
     display: flex;
+
+    
+
 }
 
 .img-left {
     position: relative;
 
+    
+
     .absolute1 {
         position: absolute;
-        bottom: 220px;
-        left: -80px;
+        transform: translateX(1010px) translateY(-220px);
+        transition: transform 2s;   
     }
 
     .absolute2 {
         position: absolute;
-        bottom: 0;
-        left: -50px;
+        transform: translateX(1010px) translateY(-220px);
+        transition: transform 2s;
     }
 
     .absolute5 {
-        position: absolute;
-        left: 0;
-        top: -40px;
+         position: absolute;
+        transform: translateX(1010px) translateY(-220px);
+        transition: transform 2s;
     }
+
 }
 
 .img-right {
     position: relative;
 
     .absolute3 {
-        position: absolute;
-        right: 360px;
-        top: -80px;
-        left: 250px;
+         position: absolute;
+        transform: translateX(1010px) translateY(-220px);
+        transition: transform 2s;
     }
 
     .absolute4 {
-        position: absolute;
-        right: -120px;
-        bottom: 0;
+         position: absolute;
+        transform: translateX(1010px) translateY(-220px);
+        transition: transform 2s;
     }
 
     .absolute6 {
         position: absolute;
-        right: -30px;
-        top: 60px;
+        transform: translateX(1010px) translateY(-220px);
+        transition: transform 2s;
     }
 }
 

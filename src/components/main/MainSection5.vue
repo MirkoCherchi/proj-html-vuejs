@@ -1,5 +1,14 @@
 <script>
-export default {};
+export default {
+    methods: {
+        scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        },
+    },
+};
 </script>
 
 <template>
@@ -7,7 +16,7 @@ export default {};
         <!-- Contenitore principale della sezione 5 -->
         <div class="cont-sec5">
             <!-- Icona freccia -->
-            <img class="arrow1" src="../../assets/svg/svg-2.svg" alt="arrow" />
+            <img @click="scrollToTop" class="arrow1" src="../../assets/svg/svg-2.svg" alt="arrow" />
             <!-- Contenitore delle cards -->
             <div class="cards">
                 <!-- Card 1 -->
@@ -20,7 +29,9 @@ export default {};
                         <div class="stick-bottom">May '19</div>
                     </div>
                     <!-- Immagine della card -->
+                    <div class="img-cont">
                     <img src="/img/h-2-blog-img-1.jpg" alt="" />
+                </div>
                     <!-- Titolo della card -->
                     <h5>This way, loves: a detailed guide through new design</h5>
                     <!-- Autore della card -->
@@ -32,7 +43,9 @@ export default {};
                         <div class="stick-top">07</div>
                         <div class="stick-bottom">May '19</div>
                     </div>
+                    <div class="img-cont">
                     <img src="/img/h-2-blog-img-2.jpg" alt="" />
+                </div>
                     <h5>This way, loves: a detailed guide through new design</h5>
                     <p>By Emily Fields</p>
                 </div>
@@ -42,7 +55,9 @@ export default {};
                         <div class="stick-top">07</div>
                         <div class="stick-bottom">May '19</div>
                     </div>
+                    <div class="img-cont">
                     <img src="/img/h-2-blog-img-3.jpg" alt="" />
+                </div>
                     <h5>This way, loves: a detailed guide through new design</h5>
                     <p>By Emily Fields</p>
                 </div>
@@ -66,6 +81,7 @@ export default {};
         height: 28px;
         width: 28px;
         padding: 5px;
+        cursor: pointer;
     }
 }
 
@@ -78,12 +94,14 @@ export default {};
 
     .card {
         position: relative;
+       
 
         .stick {
             position: absolute;
             text-align: center;
             top: -17px;
             left: 15px;
+            z-index: 1;
 
             .stick-top {
                 background-color: $bg-7;
@@ -103,10 +121,20 @@ export default {};
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 70%, 0 100%);
             }
         }
-
+.img-cont{
+    overflow: hidden;
+}
         img {
-            width: 100%;
-        }
+    width: 100%;
+    transition: 0.5s; 
+    overflow: hidden;
+
+    &:hover {
+        transform: scale(1.05); 
+        
+        
+    }
+}
 
         h5 {
             font-size: 21px;

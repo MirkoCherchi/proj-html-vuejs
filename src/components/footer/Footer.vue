@@ -31,6 +31,15 @@ export default {
                 },
             ],
         };
+        
+    },
+    methods: {
+        scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        },
     },
 };
 </script>
@@ -39,7 +48,7 @@ export default {
     <footer>
         <div class="cont-footer">
             <!-- Freccia decorativa -->
-            <img class="arrow1" src="../../assets/svg/svg-2.svg" alt="" />
+            <img @click="scrollToTop" class="arrow1" src="../../assets/svg/svg-2.svg" alt="" />
 
             <!-- Contenitore degli elementi -->
             <div class="items">
@@ -91,6 +100,7 @@ export default {
         position: absolute;
         bottom: 35px;
         right: 35px;
+        cursor: pointer;
     }
 }
 
@@ -122,7 +132,12 @@ export default {
             a {
                 text-decoration: none;
                 color: $black;
+
+                &:hover{
+                    color: $white;
+                }
             }
+
         }
     }
 }

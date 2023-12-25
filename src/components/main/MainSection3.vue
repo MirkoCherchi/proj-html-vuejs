@@ -1,5 +1,14 @@
 <script>
-export default {};
+export default {
+    methods: {
+        scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        },
+    },
+};
 </script>
 
 <template>
@@ -8,14 +17,16 @@ export default {};
         <!-- Contenitore della sezione 3 -->
         <div class="cont-section3">
             <!-- Icona freccia -->
-            <img class="arrow1" src="../../assets/svg/svg-2.svg" alt="" />
+            <img @click="scrollToTop" class="arrow1" src="../../assets/svg/svg-2.svg" alt="" />
             <!-- Titolo della sezione -->
             <h2>Working <span>process</span></h2>
             <!-- Contenitore delle card -->
             <div class="cards">
                 <!-- Prima card -->
                 <div class="card">
-                    <div class="icon"><font-awesome-icon class="light" :icon="['fas', 'lightbulb']" /></div>
+                    <div class="icon">
+                        <font-awesome-icon class="light" :icon="['fas', 'lightbulb']" />
+                    </div>
                     <h4>First there's an idea</h4>
                     <p>
                         Lorem ipsum dolor sit, conetu adipisc sed be er ore aliqua pleasure
@@ -46,7 +57,9 @@ export default {};
                 </div>
                 <!-- Quarta card -->
                 <div class="card">
-                    <div class="icon"><font-awesome-icon class="pen" :icon="['fas', 'pen']" /></div>
+                    <div class="icon">
+                        <font-awesome-icon class="pen" :icon="['fas', 'pen']" />
+                    </div>
                     <h4>So we draw along</h4>
                     <p>
                         Lorem ipsum dolor sit, conetu adipisc sed be er ore aliqua pleasure
@@ -74,6 +87,7 @@ export default {};
         height: 28px;
         width: 28px;
         padding: 5px;
+        cursor: pointer;
     }
 }
 
